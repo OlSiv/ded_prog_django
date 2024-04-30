@@ -14,3 +14,4 @@ def index_page(request):
 	
 def about_page(request):
 	return render(request, 'about.html')
+
