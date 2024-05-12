@@ -3,15 +3,14 @@ from my_app.models import Worker
 
 
 def index_page(request):
+
+	#  my_dict = {'data1': 'Tru-lu-la-', 'data2': 'La-la-la'} 
+
 	all_workers = Worker.objects.all()   
 	print(all_workers)   
+	
+	return render(request, 'index.html', {'data1': all_workers})
+	
 
-	workers_filtered = Worker.objects.filter(salary=5000)   ### new
-	print(workers_filtered)   ### new
-	
-	return render(request, 'index.html')
-	
-	
 def about_page(request):
 	return render(request, 'about.html')
-

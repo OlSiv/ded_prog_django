@@ -7,7 +7,22 @@
 </head>
 
 <body>
+
     <h1>HELLO WORLD!</h1>
+
+    {%for i in data1%}
+    <h2>Сотрудник {{forloop.counter}}</h2>
+    Фамилия: {{i.second_name}}
+    Имя: {{i.name}}
+    Зарплата:
+    {% if i.salary > 7000 %}
+    <b style="color:green;"> {{i.salary}} </b>
+    {% else %}
+    <b style="color:red;"> {{i.salary}} </b>
+    {%endif%}
+
+    {%endfor%}
+
 </body>
 
 </html>
